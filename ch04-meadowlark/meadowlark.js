@@ -32,7 +32,10 @@ const fortunes = [
   "Будь проще везде, где только можно.",
 ];
 
-app.get("/about", (req, res) => res.render("about"));
+app.get("/about", (req, res) => {
+  const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+  res.render("about", { fortune: randomFortune });
+});
 
 // custom 404 page
 app.use((req, res) => {
