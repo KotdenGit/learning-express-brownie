@@ -22,19 +22,6 @@ const port = process.env.PORT || 3000;
 
 app.get("/", (req, res) => res.render("home"));
 
-/* const fortunes = [
-  "Conquer your fears or they will conquer you.",
-  "Rivers need springs.",
-  "Do not fear what you don't know.",
-  "You will have a pleasant surprise.",
-  "Whenever possible, keep it simple.",
-  "Победи свои страхи, или они победят тебя.",
-  "Рекам нужны истоки.",
-  "Не бойся неведомого.",
-  "Тебя ждет приятный сюрприз.",
-  "Будь проще везде, где только можно.",
-]; */
-
 app.get("/about", (req, res) => {
   // const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
   res.render("about", { fortune: fortune.getFortune() });
