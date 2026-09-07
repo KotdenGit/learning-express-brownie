@@ -5,6 +5,7 @@
   },
   "devDependencies": {
     "jest": "^30.5.1",
+    "portfinder": "^1.0.38",
     "puppeteer": "^25.10.0"
   },
   "scripts": {
